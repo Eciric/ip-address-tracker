@@ -1,1 +1,16 @@
-<p>searchbar works!</p>
+<div class="searchbar">
+  <h1>IP Address Tracker</h1>
+  <form class="searchbar__form" action="javascript:void(0);">
+    <input
+      name="ipAddress"
+      type="text"
+      class="searchbar__input"
+      placeholder="Search for any IP address or domain"
+      [(ngModel)]="ipAddress"
+      (keyup.enter)="onSubmit()"
+    />
+    <button type="button" (click)="onSubmit()">
+      <img src="./assets/images/icon-arrow.svg" />
+    </button>
+  </form>
+</div>

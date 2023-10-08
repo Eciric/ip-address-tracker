@@ -1,1 +1,18 @@
-<p>details works!</p>
+<div *ngIf="ipData.query" class="details">
+  <div class="detail">
+    <p class="detail__label">Ip Address</p>
+    <p class="detail__value">{{ ipData.query }}</p>
+  </div>
+  <div class="detail">
+    <p class="detail__label">Location</p>
+    <p class="detail__value">{{ ipData.city }} / {{ ipData.country }}</p>
+  </div>
+  <div class="detail">
+    <p class="detail__label">Timezone</p>
+    <p class="detail__value">{{ ipData.timezone }}</p>
+  </div>
+  <div class="detail">
+    <p class="detail__label">ISP</p>
+    <p class="detail__value">{{ ipData.isp }}</p>
+  </div>
+</div>

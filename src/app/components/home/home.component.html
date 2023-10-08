@@ -1,3 +1,10 @@
-<app-searchbar></app-searchbar>
-<app-details></app-details>
-<app-map></app-map>
+<div class="home">
+  <app-searchbar
+    [ipAddress]="ipAddress"
+    (ipAddressChange)="ipAddressChange($event)"
+  ></app-searchbar>
+  <div class="spacer">
+    <app-details [ipData]="ip"></app-details>
+  </div>
+  <app-map [ipData]="ip"></app-map>
+</div>
