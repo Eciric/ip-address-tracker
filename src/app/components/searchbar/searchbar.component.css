@@ -37,6 +37,10 @@
   border-bottom-left-radius: 15px;
   font-weight: var(--fw-light);
   font-size: 1rem;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .searchbar__form button {
@@ -47,4 +51,37 @@
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   cursor: pointer;
+}
+
+.searchbar__input:focus {
+  outline: none;
+}
+
+.searchbar__form:focus-within {
+  outline: 2px solid blue;
+}
+
+@media (max-width: 75em) {
+  .searchbar__form {
+    width: 80%;
+    background-color: white;
+  }
+
+  .searchbar {
+    height: fit-content;
+    padding-bottom: 8rem;
+  }
+}
+
+@media (max-width: 50em) {
+  .searchbar {
+    padding-bottom: 5rem;
+  }
+}
+
+@media (max-width: 30em) {
+  .searchbar {
+    text-align: center;
+    padding-bottom: 3rem;
+  }
 }
